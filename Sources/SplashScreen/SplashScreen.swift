@@ -13,9 +13,6 @@ public struct SplashScreen<Content: View>: View {
     
     @State private var showSplash = true
 
-//    let uLineWidth: CGFloat = 5
-//    let uZoomFactor: CGFloat = 1.4
-    
     @State var percent = 0.0
     @State var uScale: CGFloat = 1
     
