@@ -9,23 +9,25 @@
 
 import SwiftUI
 
-public struct SplashScreen: View {
+public struct SplashScreen<Content: View>: View {
     
     @State private var showSplash = true
 
-    let uLineWidth: CGFloat = 5
-    let uZoomFactor: CGFloat = 1.4
+//    let uLineWidth: CGFloat = 5
+//    let uZoomFactor: CGFloat = 1.4
     
     @State var percent = 0.0
     @State var uScale: CGFloat = 1
     
-    public init(){}
+    let content: Content
+    
+    public init(@ViewBuilder contentProvider: () -> Content){
+        self.content = contentProvider()
+    }
     
     public var body: some View {
         ZStack {
-            Text("mFood Vendor")
-                .font(.largeTitle)
-//                .foregroundColor(.mFoodColor)
+            content
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
         .background(Color.white)
@@ -68,10 +70,4 @@ extension SplashScreen {
 }
 
 
-
-struct SplashScreen_Previews : PreviewProvider {
-    static var previews: some View {
-        SplashScreen().previewLayout(.sizeThatFits)
-    }
-}
 
