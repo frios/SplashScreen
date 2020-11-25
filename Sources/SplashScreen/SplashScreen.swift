@@ -19,6 +19,8 @@ public struct SplashScreen: View {
     @State var percent = 0.0
     @State var uScale: CGFloat = 1
     
+    public init(){}
+    
     public var body: some View {
         ZStack {
             Text("mFood Vendor")
