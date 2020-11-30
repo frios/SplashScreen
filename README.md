@@ -15,7 +15,7 @@ struct SplashContents: View {
     }
 }
 ```
-In your Content file create a ZStack with your content and a call to SpashScreen passing in your SplashContents.
+In your Content file create a ZStack with your content and a call to SplashScreen passing in your SplashContents.
 
 ```
 var body: some View {
