@@ -3,7 +3,7 @@
 This is a little package that allows you to create an automatically fading splash screen. Basically, you want this to start off with the same static content that your LaunchScreen File has. When the LaunchScreen goes away this will be displayed and then you can make whatever changes to its content that you want.
 
 
-Create a SpashContents struct that has your SplashScreen contents.
+Create a SplashContents struct that has your SplashScreen contents.
 
 ```
 //This is where you can get creative about what is displayed.
