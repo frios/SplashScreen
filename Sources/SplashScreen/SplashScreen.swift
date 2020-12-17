@@ -27,7 +27,7 @@ public struct SplashScreen<Content: View>: View {
             content
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-        .background(Color.white)
+//        .background(Color.white)
         .edgesIgnoringSafeArea(.all)
         .opacity(showSplash ? 1 : 0)
         .onAppear {
