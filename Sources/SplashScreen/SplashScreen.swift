@@ -27,18 +27,16 @@ public struct SplashScreen<Content: View>: View {
             content
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-//        .background(Color.white)
         .edgesIgnoringSafeArea(.all)
         .opacity(showSplash ? 1 : 0)
         .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                    withAnimation(.linear(duration: 1)) {
+                withAnimation(.easeOut(duration: 1)) {
                         self.showSplash = false
                 }
             }
         }
         .zIndex(0)
-
     }
 }
 
