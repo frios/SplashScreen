@@ -8,10 +8,17 @@ Create a SplashContents struct that has your SplashScreen contents.
 ```
 //This is where you can get creative about what is displayed.
 struct SplashContents: View {
+    @Binding var splashShown: Bool
+
     var body: some View {
-        Text("My App")
-            .font(.largeTitle)
-            .foregroundColor(.white)
+        ZStack {
+            Color(.systemBackground)
+                .ignoresSafeArea()
+            LogoView()
+                .onAppear {
+                    splashShown = true
+                }
+        }
     }
 }
 ```
