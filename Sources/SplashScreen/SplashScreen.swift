@@ -29,7 +29,7 @@ public struct SplashScreen<Content: View>: View {
             .opacity(showSplash ? 1 : 0)
             .zIndex(0) //push this screen to the back
             .onAppear {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                     withAnimation(.easeOut(duration: duration)) {
                             showSplash = false
                     }
