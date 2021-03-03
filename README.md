@@ -15,7 +15,7 @@ struct SplashContents: View {
     }
 }
 ```
-In your Content file create a boolean state variable. Add a ZStack with a call to SplashScreen passing in your SplashContents and a binding to the state variable.
+In your Content file create a boolean state variable. Add a ZStack with a call to SplashScreen passing a duration and delay. In the block pass in your SplashContents with a binding to the state variable.
 
 ```
 @State private var splashShown = false
@@ -23,7 +23,7 @@ In your Content file create a boolean state variable. Add a ZStack with a call t
 var body: some View {
     ZStack {
         MyAppView()
-        SplashScreen() {
+        SplashScreen(duration: 2.0, delay: 2.0) {
             SplashContents(splashShown: $splashShown)
         }
     }
