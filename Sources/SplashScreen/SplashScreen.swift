@@ -25,7 +25,7 @@ public struct SplashScreen<Content: View>: View {
     
     public var body: some View {
         content
-            .edgesIgnoringSafeArea(.all)
+//            .edgesIgnoringSafeArea(.all)
             .opacity(showSplash ? 1 : 0)
             .zIndex(0) //push this screen to the back
             .onAppear {
